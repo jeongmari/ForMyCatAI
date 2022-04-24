@@ -7,7 +7,7 @@ public class CatFeed
       Scanner sc = new Scanner( System.in );
       
     
-      System.out.print( "체중: " ); // 체중을 입력받음
+      System.out.print( "체중(단위: kg): " ); // 체중을 입력받음
       float weight = sc.nextFloat();
       
       float weight_discrimination[] = new float[ 3 ]; // 체중 분류 배열 생성
@@ -39,7 +39,7 @@ public class CatFeed
       }
       
   
-      System.out.print( "운동량: " ); // 운동량을 입력받음
+      System.out.print( "운동량(단위: 1~10단계): " ); // 운동량을 입력받음
       float play = sc.nextFloat();
       
       float play_discrimination[] = new float[ 3 ]; // 운동량 분류 배열 생성
@@ -96,7 +96,7 @@ public class CatFeed
          else if ( weight_index == 1 ) feed = weight * 90; // 보통
          else if ( weight_index == 2 ) feed = weight * 90; // 비만
       }
-      
+      System.out.println();
       System.out.printf( "적정 사료량은 " + feed +"kcal 입니다!"); // 일일 적정량 출력
    }
 }
